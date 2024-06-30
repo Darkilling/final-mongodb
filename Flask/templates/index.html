@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+</head>
+<body>
+    <h1>Datos obtenidos de la API usando NodeJS</h1>
+
+    <form action="/buscar" method="POST">
+        <input type="text" name="name">
+        <button type="submit">Buscar Restaurante</button>
+    </form>
+
+    <ul>
+        <table>
+            <tr>
+                <th>Nombre Restaurante</th>
+                <th>Tipo cocina</th>
+                <th>Comuna Ubicacion</th>
+            </tr>
+            {% for datos in restaurantes %}
+            <tr>
+                <td><input type="text" value="{{datos.name}}"></td>
+            
+                <td><input type="text" value="{{datos.cuisine}}"></td>
+            
+                <td><input type="text" value="{{datos.borough}}"></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </ul>
+</body>
+</html>
