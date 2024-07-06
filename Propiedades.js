@@ -7,23 +7,22 @@ const PropiedadesSchema = new mongoose.Schema({
     },
     ubicacion: {
         type:String,
-        require: true
+        
     },
     tipo: {
         type:String,
-        require: true
+        
     },
     estado: {
         type:String,
-        require: true
+        
     },
     precio: {
         type:String,
-        require: true
+        
     },
     descripcion: {
         type:String,
-        require: true
     }
 })
 
