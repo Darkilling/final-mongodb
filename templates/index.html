@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Datos obtenidos desde API puerrto 2000</h1>
+    <table>
+        <tr>
+            <th>nombre propiedad</th>
+            <th>ubicacion de la propiedad</th>
+            <th>tipo de propiedad</th>
+            <th>estado de la propiedad</th>
+            <th>precio de la propiedad</th>
+            <th>descripcion de la propiedad</th>
+        </tr>
+        {%for datos in propiedad%}
+        <tr>
+            <td><input type="text" value="{{datos.nombre}}"></td>
+            <td><input type="text" value="{{datos.ubicacion}}"></td>
+            <td><input type="text" value="{{datos.tipo}}"></td>
+            <td><input type="text" value="{{datos.estado}}"></td>
+            <td><input type="text" value="{{datos.precio}}"></td>
+            <td><input type="text" value="{{datos.descripcion}}"></td>
+        </tr>
+        {%endfor%}
+    </table>
+</body>
+</html>
